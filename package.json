@@ -4,7 +4,19 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "codegen": "npx playwright codegen https://revvitysignals.com/products/research/signals-notebook-eln"
+    "codegen": "npx playwright codegen https://revvitysignals.com/products/research/signals-notebook-eln",
+    "test": "npx playwright test && npx playwright show-report",
+    "test:ui": "npx playwright test --ui",
+    "test:headed": "npx playwright test --headed",
+    "test:debug": "npx playwright test --debug",
+    "test:report": "npx playwright show-report",
+    "test:report:html": "npx playwright test --reporter=html",
+    "test:report:json": "npx playwright test --reporter=json",
+    "lint": "eslint . --ext .ts",
+    "lint:fix": "eslint . --ext .ts --fix",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "clean": "rm -rf node_modules dist"
   },
   "repository": {
     "type": "git",
